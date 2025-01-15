@@ -1,16 +1,29 @@
 <html>
     <body>
+        <div class="box">  
         <div class="div">
         <h1 class="h">This it my Colorfull place</h1>
-         <button class="btn" onclick="push()">Play</button>
+        <div>
+        <button class="btn" onclick="push()">Play</button>
          <button class="btn" onclick="location.reload()"> Stop</button>
         </div>
+        </div>
+        </div>
        <style>
-           body{ display: flex;  align-items: center;justify-content: center;background-color: rgb(57, 57, 57);}
-           .div{border: 3px solid black; width:600px; height:300px ;font-size: 32px;box-shadow: 0 0 10px 2px;
-            background-color: lightslategray; text-align: center; } 
-           .btn{border: 1px dashed black;border-radius: 10px;padding: 1px; width: 100px;height: 40px;
+           body{ background-color: rgb(57, 57, 57);}
+            
+            .box{width: 70vw;height: 40vh;display: flex;  align-items: center;
+                justify-content: center;padding:10rem 10rem;} 
+
+           .div{
+                
+                border: 3px solid black; width:600px; height:300px ;
+                font-size: 32px;box-shadow: 0 0 10px 2px;
+                background-color: lightslategray; text-align: center; } 
+           
+            .btn{border: 1px dashed black;border-radius: 10px;padding: 1px; width: 100px;height: 40px;
                 background-color: rgb(68, 94, 122);cursor: pointer;}
+            
             .btn:hover{background-color: rgb(8, 149, 225);}    
        </style>
        <script>
