@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <div class="div">
+        <h1 class="h">This it my Colorfull place</h1>
+         <button class="btn" onclick="push()">Play</button>
+         <button class="btn" onclick="location.reload()"> Stop</button>
+        </div>
+       <style>
+           body{ display: flex;  align-items: center;justify-content: center;background-color: rgb(57, 57, 57);}
+           .div{border: 3px solid black; width:600px; height:300px ;font-size: 32px;box-shadow: 0 0 10px 2px;
+            background-color: lightslategray; text-align: center; } 
+           .btn{border: 1px dashed black;border-radius: 10px;padding: 1px; width: 100px;height: 40px;
+                background-color: rgb(68, 94, 122);cursor: pointer;}
+            .btn:hover{background-color: rgb(8, 149, 225);}    
+       </style>
+       <script>
+            let red=0;
+             let green=0;
+             let blue=0;
+             var r=true;
+             var g=true;
+             var b=true;
+              
+               
+            function color () {
+                       
+                if ( r==true && red<=255)  {     red++;  
+                    if (red==255)  {  r=false;}   }   
+                   else {  r=false ; red--;
+                
+                   if (red==0) {g=true} }       
+                           
+               if ( g==true && green<=255)  {    green++;  
+                   if (green==255)  {  g=false;}  }   
+                    else {  g=false ; green--;
+                    
+                    if (green==0) {b=true;}       }     
+                         
+               if ( b==true && blue<=255)  {    blue++;  
+                    if (blue==255)  {  b=false;}  }   
+                    else {  b=false ;  blue--;
+                    if (blue==0) {r=true;}        }   
+                           
+        
+          document.querySelector('.h').style.color=`rgb(${red},${green},${blue})`;    }; 
+           
+           function push(){
+            setInterval(color,50) ; color();};
+
+           
+       </script>
+    </body>
+</html>
